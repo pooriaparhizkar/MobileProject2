@@ -5,7 +5,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
+import com.example.mobileproject2.BaseApplication
 import com.example.mobileproject2.R
 import com.example.mobileproject2.databinding.FragmentNoteDetailBinding
 
@@ -26,9 +28,14 @@ class NoteDetailFragment:Fragment(R.layout.fragment_note_detail) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
         binding.noteDetailTitle.text=args.note.title;
         binding.noteDetailText.text=args.note.text;
+
+        binding.deleteNote.setOnClickListener {
+            BaseApplication.database.getNoteDao().deleteNote(args.note.id)
+            findNavController().navigate(R.id.action_noteDetailFragment_to_noteListFragment)
+        }
+
 
     }
 }
