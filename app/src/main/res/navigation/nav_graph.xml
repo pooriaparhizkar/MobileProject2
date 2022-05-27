@@ -14,6 +14,9 @@
         <action
             android:id="@+id/action_noteDetailFragment_to_noteListFragment"
             app:destination="@id/noteListFragment" />
+        <action
+            android:id="@+id/action_noteDetailFragment_to_editNoteFragment"
+            app:destination="@id/editNoteFragment" />
     </fragment>
 
     <fragment
@@ -34,6 +37,17 @@
         <action
             android:id="@+id/action_newNoteFragment_to_noteListFragment2"
             app:destination="@id/noteListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editNoteFragment"
+        android:name="com.example.mobileproject2.noteDetail.EditNoteFragment"
+        android:label="EditNoteFragment" >
+        <action
+            android:id="@+id/action_editNoteFragment_to_noteListFragment"
+            app:destination="@id/noteListFragment" />
+        <argument
+            android:name="note"
+            app:argType="com.example.mobileproject2.model.NoteWithId" />
     </fragment>
 
 </navigation>

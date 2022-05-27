@@ -10,6 +10,7 @@ import androidx.navigation.fragment.navArgs
 import com.example.mobileproject2.BaseApplication
 import com.example.mobileproject2.R
 import com.example.mobileproject2.databinding.FragmentNoteDetailBinding
+import com.example.mobileproject2.noteList.NoteListFragmentDirections
 
 class NoteDetailFragment:Fragment(R.layout.fragment_note_detail) {
 
@@ -34,6 +35,11 @@ class NoteDetailFragment:Fragment(R.layout.fragment_note_detail) {
         binding.deleteNote.setOnClickListener {
             BaseApplication.database.getNoteDao().deleteNote(args.note.id)
             findNavController().navigate(R.id.action_noteDetailFragment_to_noteListFragment)
+        }
+
+        binding.editNote.setOnClickListener {
+            findNavController().navigate(NoteDetailFragmentDirections.actionNoteDetailFragmentToEditNoteFragment(args.note))
+
         }
 
 
