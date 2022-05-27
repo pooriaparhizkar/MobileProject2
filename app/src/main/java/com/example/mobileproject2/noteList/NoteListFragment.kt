@@ -27,11 +27,8 @@ class NoteListFragment:Fragment(R.layout.fragment_note_list) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-
-
-        binding.button.setOnClickListener{
-
-            findNavController().navigate(R.id.action_noteListFragment_to_noteDetailFragment2)
+        binding.newNote.setOnClickListener {
+            findNavController().navigate(R.id.action_noteListFragment_to_newNoteFragment2)
         }
 
 

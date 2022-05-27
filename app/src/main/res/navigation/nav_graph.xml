@@ -7,7 +7,11 @@
     <fragment
         android:id="@+id/noteDetailFragment"
         android:name="com.example.mobileproject2.noteDetail.NoteDetailFragment"
-        android:label="NoteDetailFragment" />
+        android:label="NoteDetailFragment" >
+        <argument
+            android:name="note"
+            app:argType="com.example.mobileproject2.model.Note" />
+    </fragment>
 
     <fragment
         android:id="@+id/noteListFragment"
@@ -16,6 +20,13 @@
         <action
             android:id="@+id/action_noteListFragment_to_noteDetailFragment2"
             app:destination="@id/noteDetailFragment" />
+        <action
+            android:id="@+id/action_noteListFragment_to_newNoteFragment2"
+            app:destination="@id/newNoteFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/newNoteFragment"
+        android:name="com.example.mobileproject2.noteDetail.NewNoteFragment"
+        android:label="NewNoteFragment" />
 
 </navigation>
