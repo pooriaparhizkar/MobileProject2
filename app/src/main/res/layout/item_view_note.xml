@@ -12,6 +12,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:text="TextView"
+        android:textColor="@color/black"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
@@ -20,9 +21,20 @@
     <TextView
         android:id="@+id/textNoteText"
         android:layout_width="382dp"
+        android:textColor="@color/black"
         android:layout_height="33dp"
         android:layout_marginTop="8dp"
         android:text="TextView"
         app:layout_constraintStart_toStartOf="@+id/textNoteTitle"
         app:layout_constraintTop_toBottomOf="@+id/textNoteTitle" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="________________________________________________"
+        android:textAlignment="center"
+        android:textColor="#535353"
+        app:layout_constraintStart_toStartOf="@+id/textNoteText"
+        app:layout_constraintTop_toBottomOf="@+id/textNoteText" />
 </androidx.constraintlayout.widget.ConstraintLayout>

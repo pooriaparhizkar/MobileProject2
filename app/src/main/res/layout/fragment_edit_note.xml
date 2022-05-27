@@ -2,12 +2,13 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#ECDBC8"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
 
     <EditText
         android:id="@+id/textEditNote"
-        android:layout_width="373dp"
+        android:layout_width="match_parent"
         android:layout_height="548dp"
 
         android:layout_marginStart="32dp"
@@ -23,7 +24,7 @@
 
     <EditText
         android:id="@+id/titleEditNote"
-        android:layout_width="375dp"
+        android:layout_width="match_parent"
         android:layout_height="48dp"
         android:layout_marginStart="32dp"
         android:layout_marginTop="8dp"

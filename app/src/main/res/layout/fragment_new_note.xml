@@ -7,13 +7,14 @@
 
     <EditText
         android:id="@+id/textNote"
-        android:layout_width="373dp"
+        android:layout_width="match_parent"
         android:layout_height="548dp"
 
         android:layout_marginStart="32dp"
         android:layout_marginTop="4dp"
         android:layout_marginEnd="32dp"
         android:ems="10"
+        android:textColor="@color/black"
         android:gravity="start|top"
         android:hint="Write your note..."
         android:inputType="textMultiLine"
@@ -23,9 +24,10 @@
 
     <EditText
         android:id="@+id/titleNote"
-        android:layout_width="375dp"
+        android:layout_width="match_parent"
         android:layout_height="48dp"
         android:layout_marginStart="32dp"
+        android:textColor="@color/black"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="32dp"
         android:ems="10"
